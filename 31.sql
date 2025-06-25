@@ -1,0 +1,17 @@
+USE sample;
+SELECT * FROM sample71_a;
+SELECT * FROM sample71_b;
+SELECT * FROM sample71_a
+UNION
+SELECT * FROM sample71_b;
+SELECT * FROM sample71_a
+UNION
+SELECT * FROM sample71_b
+UNION
+SELECT age FROM sample31;
+SELECT a AS c FROM sample71_a
+UNION
+SELECT b AS c FROM sample71_b ORDER BY c;
+SELECT * FROM sample71_a
+UNION ALL
+SELECT * FROM sample71_b;

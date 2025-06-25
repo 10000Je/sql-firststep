@@ -1,0 +1,8 @@
+USE sample;
+SELECT * FROM sample31;
+SELECT * FROM sample31 ORDER BY age;
+SELECT * FROM sample31 ORDER BY address;
+SELECT * FROM sample31 ORDER BY age DESC;
+SELECT * FROM sample31 ORDER BY age ASC;
+SELECT * FROM sample311;
+SELECT * FROM sample311 ORDER BY a;

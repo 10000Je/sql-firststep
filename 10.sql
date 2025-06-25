@@ -1,0 +1,6 @@
+USE sample;
+SELECT * FROM sample32;
+SELECT * FROM sample32 ORDER BY a;
+SELECT * FROM sample32 ORDER BY a, b;
+SELECT * FROM sample32 ORDER BY b, a;
+SELECT * FROM sample32 ORDER BY a ASC, b DESC;

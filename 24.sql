@@ -1,0 +1,11 @@
+USE sample;
+SELECT * FROM sample551;
+SELECT * FROM sample552;
+UPDATE sample551 SET a='있음' WHERE EXISTS(SELECT * FROM sample552 WHERE no2=no);
+SELECT * FROM sample551;
+UPDATE sample551 SET a='없음' WHERE NOT EXISTS(SELECT * FROM sample552 WHERE no2=no);
+SELECT * FROM sample551;
+UPDATE sample551 SET a='있음' WHERE EXISTS(SELECT * FROM sample552 WHERE sample552.no2=sample551.no);
+SELECT * FROM sample551;
+SELECT * FROM sample551 WHERE no IN(3, 5);
+SELECT * FROM sample551 WHERE no IN(SELECT no2 FROM sample552);

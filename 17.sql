@@ -1,0 +1,7 @@
+USE sample;
+SELECT * FROM sample41;
+DELETE FROM sample41;
+DELETE FROM sample41 WHERE no=3;
+SELECT * FROM sample41;
+DELETE FROM sample41 WHERE no=1 OR no=2;
+SELECT * FROM sample41;

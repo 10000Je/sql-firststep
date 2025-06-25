@@ -1,0 +1,43 @@
+USE sample;
+CREATE TABLE sample631 (
+    a INTEGER NOT NULL,
+    b INTEGER NOT NULL UNIQUE,
+    c VARCHAR(30)
+);
+DESC sample631;
+CREATE TABLE sample632 (
+    no INTEGER NOT NULL,
+    sub_no INTEGER NOT NULL,
+    name VARCHAR(30),
+    PRIMARY KEY(no, sub_no)
+);
+DESC sample632;
+DROP TABLE sample632;
+CREATE TABLE sample632 (
+    no INTEGER NOT NULL,
+    sub_no INTEGER NOT NULL,
+    name VARCHAR(30),
+    CONSTRAINT pkey_sample PRIMARY KEY(no, sub_no)
+);
+DESC sample632;
+ALTER TABLE sample631 MODIFY c VARCHAR(30) NOT NULL;
+DESC sample631;
+ALTER TABLE sample631 ADD CONSTRAINT pkey_sample631 PRIMARY KEY(a);
+DESC sample631;
+ALTER TABLE sample631 MODIFY c VARCHAR(30);
+DESC sample631;
+ALTER TABLE sample631 DROP PRIMARY KEY;
+DESC sample631;
+CREATE TABLE sample634(
+    p INTEGER NOT NULL,
+    a VARCHAR(30),
+    CONSTRAINT pkey_sample634 PRIMARY KEY(p)
+);
+DESC sample634;
+INSERT INTO sample634 VALUES(1, '첫째줄');
+INSERT INTO sample634 VALUES(2, '둘째줄');
+INSERT INTO sample634 VALUES(3, '셋째줄');
+# INSERT INTO sample634 VALUES(2, '넷째줄'); -> 에러 발생
+# UPDATE sample634 SET p=2 WHERE p=3; -> 에러 발생
+SELECT a, b FROM sample635;
+DESC sample635;
